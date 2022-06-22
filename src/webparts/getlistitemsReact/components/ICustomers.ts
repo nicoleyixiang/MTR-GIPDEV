@@ -1,6 +1,5 @@
 export interface ISPListCustomerItem {
-    CustomerID: string;
-    CustomerName: string;
-    CustomerAddress: string;
-    CustomerType: string;
+    Title: string;
+    Content_EN: string;
+    RollupImage: File
 }

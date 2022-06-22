@@ -24,10 +24,9 @@ export default class GetlistitemsReact extends React.Component<IGetlistitemsReac
           this.state.items.map(function(item:ISPListCustomerItem){
             return(
               <div className={"ms-Grid-col ms-sm6 ms-md6 ms-lg4"}>               
-                <label className="ms-Label ms-font-xxl">{item.CustomerID}</label>
-                <label className="ms-Label">{item.CustomerName}</label>
-                <label className="ms-Label">{item.CustomerType}</label>
-                <label className="ms-Label">{item.CustomerAddress}</label>                              
+                <label className="ms-Label ms-font-xxl">{item.Title}</label>
+                <label className="ms-Label">{item.Content_EN}</label>
+                <label className="ms-Label">{item.RollupImage}</label>
               </div>
             );
           })
@@ -44,7 +43,7 @@ export default class GetlistitemsReact extends React.Component<IGetlistitemsReac
 
   private _getListCustomerData():void
   {
-    pnp.sp.web.lists.getByTitle('Customers').items.getAll().then
+    pnp.sp.web.lists.getByTitle('Publication').items.getAll().then
     ((Response)=>{
       let customerCollection = Response.map(item=>new ClassCustomer(item));
       this.setState({items:customerCollection});

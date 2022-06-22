@@ -1,15 +1,13 @@
 import { ISPListCustomerItem } from "./ICustomers";
 
 export class ClassCustomer{
-    public CustomerName:string;
-    public CustomerAddress:string;
-    public CustomerType:string;
-    public CustomerID:string;
+    public Title:string;
+    public Content_EN:string;
+    public RollupImage:File
 
     constructor(item: ISPListCustomerItem) {
-        this.CustomerName = item.CustomerName;
-        this.CustomerAddress = item.CustomerAddress;
-        this.CustomerType = item.CustomerType;
-        this.CustomerID = item.CustomerID;
+        this.Title = item.Title;
+        this.Content_EN = item.Content_EN;
+        this.RollupImage = item.RollupImage;
     }
 }
