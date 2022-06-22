@@ -23,7 +23,12 @@ export default class GetlistitemsReact extends React.Component<IGetlistitemsReac
         {
           this.state.items.map(function(item:ISPListCustomerItem){
             return(
-              <span>{ item.CustomerID }</span>
+              <div className={"ms-Grid-col ms-sm6 ms-md6 ms-lg4"}>               
+                <label className="ms-Label ms-font-xxl">{item.CustomerID}</label>
+                <label className="ms-Label">{item.CustomerName}</label>
+                <label className="ms-Label">{item.CustomerType}</label>
+                <label className="ms-Label">{item.CustomerAddress}</label>                              
+              </div>
             );
           })
         }
