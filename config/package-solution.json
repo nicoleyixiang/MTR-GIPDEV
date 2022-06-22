@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "reactdemo-client-side-solution",
+    "id": "98880e2c-8ef6-47e1-9c4e-7612c24b8327",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.14.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "reactdemo description"
+      },
+      "longDescription": {
+        "default": "reactdemo description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "reactdemo Feature",
+        "description": "The feature that activates elements of the reactdemo solution.",
+        "id": "a4bfa8de-6cca-458d-bab4-a73afe891190",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/reactdemo.sppkg"
+  }
+}
