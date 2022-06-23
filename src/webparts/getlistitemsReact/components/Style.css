@@ -33,6 +33,8 @@ h1{
 .box .heading,
 .box .text {
     width: 300px;
+    left: 0px;
+    padding-top: 3px;
 }
 
 h2 {
@@ -54,21 +56,21 @@ p{
 }
 
 .scroll-bg {
-    margin: 10% auto;
+    /* margin: 10% auto; */
     background: white;
 }
 
 .scroll-div{
-    width: 300px;
+    width: 350px;
     background: #ffffff;
-    height: 200px;
+    height: 250px;
     overflow: hidden;
     overflow-y: auto;
 }
 
 .scroll-object {
     font-size: 20px;
-    padding: 10px;
+    /* padding: 10px; */
 }
 
 @media (min-width: 700px){
