@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styles from './GetlistitemsReact.module.scss';
+import './Style.css';
 import { IGetlistitemsReactProps } from './IGetlistitemsReactProps';
 import { escape } from '@microsoft/sp-lodash-subset';
 import pnp from 'sp-pnp-js';
@@ -28,9 +29,20 @@ export default class GetlistitemsReact extends React.Component<IGetlistitemsReac
           this.state.items.map(function(item:ISPListCustomerItem){
             const imageJSON = JSON.parse(item.RollupImage);
             return(
-              <div className={"ms-Grid-col ms-sm6 ms-md6 ms-lg4"}>               
-                <label className="ms-Label ms-font-xxl">{item.Title}</label>
-                <img src={imageJSON.serverRelativeUrl}></img>
+              <div className={"ms-Grid-col ms-sm6 ms-md6 ms-lg4"}> 
+              <div className="container">
+                <div className="box">
+                  <div className="heading">
+                    <h2>{item.Title}</h2>
+                  </div>
+                  <img src={imageJSON.serverRelativeUrl}></img>
+                  <div className='text'>
+                    <p>
+                    {item.Content_EN}
+                    </p>
+                  </div>
+                </div>
+                </div>
               </div> 
             );
           }.bind(this))
