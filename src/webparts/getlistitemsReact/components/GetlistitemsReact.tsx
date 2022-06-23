@@ -1,12 +1,12 @@
 import * as React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import $ from 'jquery';
 import Popper from 'popper.js';
+import  { Carousel }  from 'react-bootstrap';
 import styles from './GetlistitemsReact.module.scss';
 import './Style.css';
 import { IGetlistitemsReactProps } from './IGetlistitemsReactProps';
 import { escape } from '@microsoft/sp-lodash-subset';
-import pnp from 'sp-pnp-js';
+import pnp, { Items } from 'sp-pnp-js';
 import { ClassCustomer } from './ClassCustomer';
 import {ISPListCustomerItem} from './ICustomers';
 import { ClassImage } from './ClassImage';
@@ -31,7 +31,6 @@ export default class GetlistitemsReact extends React.Component<IGetlistitemsReac
           // the map function applies the function to each element in 
           // the array and returns the resulting new array 
           this.state.items.map(function(item:ISPListCustomerItem){
-            const imageJSON = JSON.parse(item.RollupImage);
             return(
               <div className={"ms-Grid-col ms-sm6 ms-md6 ms-lg4"}> 
                 <div className="card mb-3">
@@ -39,7 +38,7 @@ export default class GetlistitemsReact extends React.Component<IGetlistitemsReac
                     <div className="heading">
                       <h2>{item.Title}</h2>
                     </div>
-                    <img src={imageJSON.serverRelativeUrl}></img>
+                    <img src={JSON.parse(item.RollupImage).serverRelativeUrl}></img>
                     <div className='text'>
                       <div className="scroll-bg">
                         <div className="scroll-div">
