@@ -17,8 +17,8 @@
     "@pnp/graph": "^3.4.1",
     "@pnp/sp": "^3.4.1",
     "@types/bootstrap": "^4.6.2",
+    "@types/jquery": "^3.5.14",
     "bootstrap": "^4.6.1",
-    "jquery": "^3.6.0",
     "office-ui-fabric-react": "7.174.1",
     "popper.js": "^1.16.1",
     "react": "16.13.1",
@@ -27,6 +27,8 @@
     "react-elastic-carousel": "^0.11.5",
     "react-html-parser": "^2.0.2",
     "react-native-cli": "^2.0.1",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1",
     "sp-pnp-js": "^3.0.10",
     "tw-elements": "^1.0.0-alpha12"
   },
@@ -39,6 +41,7 @@
     "@types/react-dom": "16.9.8",
     "@types/webpack-env": "1.13.1",
     "ajv": "~5.2.2",
-    "gulp": "~4.0.2"
+    "gulp": "~4.0.2",
+    "jquery": "^3.6.0"
   }
 }
