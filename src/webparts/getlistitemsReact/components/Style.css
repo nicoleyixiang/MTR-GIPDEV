@@ -18,9 +18,7 @@ h1{
 .box {
     max-width: 350px;
     padding: 10px;
-    border: 1px solid black;
     margin: 10px auto;
-    background-color: lightgrey;
 }
 
 .box img {
@@ -29,16 +27,20 @@ h1{
     display: block;
     object-fit: cover;
     padding: 5px;
+    border-radius: 10px;
 }
 
 .box .heading,
 .box .text {
-    width: 100%;
-    padding: 0 5 px;
-    min-width: 300px;
+    width: 300px;
 }
 
-h2, h4 {
+h2 {
+    font-size: 25px;
+    color: grey; 
+}
+
+h4 {
     text-transform: uppercase;
 }
 
@@ -47,6 +49,26 @@ p{
     color: black;
     text-decoration: none;
     padding: 10px 20px;
+    margin-right: auto;
+    overflow-y: auto;
+}
+
+.scroll-bg {
+    margin: 10% auto;
+    background: white;
+}
+
+.scroll-div{
+    width: 300px;
+    background: #ffffff;
+    height: 200px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.scroll-object {
+    font-size: 20px;
+    padding: 10px;
 }
 
 @media (min-width: 700px){

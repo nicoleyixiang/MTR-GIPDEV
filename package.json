@@ -16,10 +16,16 @@
     "@microsoft/sp-webpart-base": "1.14.0",
     "@pnp/graph": "^3.4.1",
     "@pnp/sp": "^3.4.1",
+    "bootstrap": "^5.1.3",
+    "jquery": "^3.6.0",
     "office-ui-fabric-react": "7.174.1",
+    "popper.js": "^1.16.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "sp-pnp-js": "^3.0.10"
+    "react-html-parser": "^2.0.2",
+    "react-native-cli": "^2.0.1",
+    "sp-pnp-js": "^3.0.10",
+    "tw-elements": "^1.0.0-alpha12"
   },
   "devDependencies": {
     "@microsoft/rush-stack-compiler-3.9": "0.4.47",
