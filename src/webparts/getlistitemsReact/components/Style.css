@@ -33,8 +33,12 @@ h1{
     object-fit: cover;
 }
 
-.box .heading,
-.box .text {
+.box .heading {
+    max-height: 40px;
+}
+
+.box .text 
+.box .heading {
     width: 300px;
     left: 0px;
     padding-top: 3px;
@@ -44,6 +48,10 @@ h2 {
     font-size: 25px;
     color: grey; 
     font-style: bold;
+    /* display: inline-block; */
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
 }
 
 h4 {
