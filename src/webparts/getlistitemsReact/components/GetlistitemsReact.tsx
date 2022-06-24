@@ -26,18 +26,29 @@ export default class GetlistitemsReact extends React.Component<IGetlistitemsReac
   {
     super(props);
     this.state={
-      items:[]
+      items:[],
+      settings: {
+        dots: true,
+        arrows: true,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        // initialSlide: 1,
+        speed: 500
+        // appendDots: dots => {
+        //   return <MagicSliderDots dots={dots} numDotsToShow={4} dotWidth={30} />;
+        // }
     }
-  }
+  }}
   
   public render(): React.ReactElement<IGetlistitemsReactProps> {
     return (
-      <Slider>
+      <Slider {...this.state.settings}>
         {  
           this.state.items.map(item => {
             return (
               <div className={"ms-Grid-col ms-sm6 ms-md6 ms-lg4"}> 
-                <div className="card mb-3">
+                {/* <div className="card mb-3"> */}
                   <div className="box">
                     <div className="heading">
                       <h2>{item.Title}</h2>
@@ -53,12 +64,13 @@ export default class GetlistitemsReact extends React.Component<IGetlistitemsReac
                       </div>
                     </div>
                   </div>
-                </div>
+                {/* </div> */}
               </div>
             )
           })
           }
       </Slider>
+
       // <div className={ styles.getlistitemsReact }>
       //   {
       //     this.state.items.map(function(item:ISPListCustomerItem){
